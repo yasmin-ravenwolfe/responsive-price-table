@@ -4,29 +4,13 @@
 
 .container {
   max-width:  960px;
-
-  .plan {
-    float:none;
-    width: 300px / 960px *100%;
-    margin:0;
-  }
-
-  img {
-  display: hidden;
-  }
- 
-  @media all and (min-width: 420px) {
+}
+  @media all and (min-width: 767px) {
     .plan {
       height: 500px;
-      float: left;
-      width: 300px / 960px * 100%;
-      margin: 0;
     }
+    
 
-    .plan.premium {
-      margin: 0 (30px / 960px * 100%);
-    }
-  } 
 }
 
  
