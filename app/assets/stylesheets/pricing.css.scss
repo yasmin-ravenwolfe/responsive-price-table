@@ -2,15 +2,49 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+@import 'foundation/components/global';
+@import 'foundation/variables';
+@import 'foundation/components/grid'
+
+@mixin breakpoint($point) {
+  @if $point == mobile-phone {
+    @media (max-width: 420px) { @content; }
+  }
+  @else if $point == tablet {
+    @media (min-width = 421px)(max-width: 780px) { @content; }
+  }
+  @else if $point == computer {
+    @media (min-width: 781px)  { @content; }
+  }
+}
+
+
 .container {
   max-width:  960px;
-}
-  @media all and (min-width: 767px) {
-    .plan {
-      height: 500px;
-    }
-    
 
+  .plan {
+    @include breakpoint($mobile-phone){
+      float:none;
+      width: 300px / 960px *100%;
+      margin:0;
+      img {
+        display: hidden;
+      }
+    }
+  }
+
+ 
+  @media all and (min-width: 420px) {
+    .plan {
+      @include breakpoint($computer){
+        height: 500px;
+        float: left;
+        width: 300px / 960px * 100%;
+        margin: 0;
+      }
+    }
+  }
 }
 
  
