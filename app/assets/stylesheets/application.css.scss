@@ -8,14 +8,18 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require foundation
  *= require normalize
  *= require_self
- *= require_tree .
- *= require foundation
+ *= require pricing
+ 
 
  */
 
 @import 'compass/css3/border-radius';
+@import 'foundation/components/global';
+@import 'foundation/variables';
+@import 'foundation/components/grid';
 
 body {
  	background-color: #16a085;
